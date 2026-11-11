@@ -10,8 +10,8 @@
     --bs-warning: var(--chocolate-brown);
     --bs-warning-rgb: 153, 88, 42;
 }
-.border-primary:{ 
-    --bs-border-color: var(--camel);
+.border-primary{ 
+    border-color: var(--camel);
 }
 .text-primary{
     --bs-text-color: var(--camel);
