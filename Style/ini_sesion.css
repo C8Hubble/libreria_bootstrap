@@ -1,0 +1,47 @@
+:root {
+    --dark-wine: #6f1d1bff;
+    --camel: #bb9457ff;            /* rgb 187, 148, 87 */
+    --dark-coffee: #432818ff;
+    --chocolate-brown: #99582aff;  /* rgb 153, 88, 42; */
+    --light-apricot: #ffe6a7ff;
+
+    --bs-primary: var(--camel);
+    --bs-primary-rgb: 187, 148, 87;
+    --bs-warning: var(--chocolate-brown);
+    --bs-warning-rgb: 153, 88, 42;
+}
+.border-primary:{ 
+    --bs-border-color: var(--camel);
+}
+.text-primary{
+    --bs-text-color: var(--camel);
+}
+.icono {
+    width: 25%;
+    height: 25%;
+}
+input{
+    --bs-border-color: var(--camel);
+    --bs-color: var(--camel);   
+}
+input.form-control:focus{
+    border-color: var(--camel);
+    color: var(--camel);
+}
+button.btn{
+    background-color: var(--dark-wine);
+
+}
+button.btn:hover{
+    background-color: var(--dark-coffee);
+}
+button.btn:focus{
+    background-color: var(--dark-coffee);
+}
+
+a.btn:hover{
+    transform: scale(1.08);
+}
+.text-warning{
+    --bs-text-color: var(--chocolate-brown);    
+}
