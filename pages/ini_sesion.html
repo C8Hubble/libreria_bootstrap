@@ -13,7 +13,7 @@
 <body>
     <div class="container d-flex justify-content-center">
         <div class="col-md-5  mt-5">
-            <form action="#" id="form-login" onsubmit="return validarLogin()"
+            <form action="#" id="form-login" onsubmit="return validarLoginA()"
                 class=" pb-2 border border-3 rounded-4 shadow">
 
                 <fieldset class="border-top border-primary  border-5 rounded d-flex flex-column align-items-center">
@@ -26,13 +26,13 @@
                     <div class="alert alert-info d-flex rounded-4 " role="alert">
                         <i class="bi bi-info-circle mx-3"></i>
                         <div>
-                            <p>Cuenta de prueba (F01 Evaluación):</p>
+                            <p>Cuenta de prueba:</p>
                             <p>Correo: <strong>admin@biblioweb.test</strong><br>
                                 Contraseña: <strong>Admin123</strong>
                             </p>
                         </div>
                     </div>
-                    <div class="w-100 px-5">    <!----- inputs del formulario de ingreso ------>
+                    <div class="w-100 px-5"> <!----- inputs del formulario de ingreso ------>
 
                         <label for="usuario" class="form-label mt-4 fw-bold ">
                             <i class="bi bi-envelope mx-3"></i>Correo institucional
@@ -46,9 +46,9 @@
                         </label>
                         <input type="password" id="clave" name="clave" class="form-control w-100 mb-3 text-primary py-3"
                             required placeholder="**********">
-                                                                    <!----- boton de ingreso ------>
-
-                        <button type="submit" id="ingreso" class="btn text-white rounded px-3 py-2 w-100 ">
+                        <!----- boton de ingreso ------>
+                        <button type="submit" onclick="validarLoginA()" id="ingreso"
+                            class="btn text-white rounded px-3 py-2 w-100 ">
                             <i class="bi bi-box-arrow-in-right mx-2"></i>
                             Ingresar al Panel
                         </button>
@@ -66,18 +66,19 @@
             </form>
 
         </div>
-                                                <!----- cambio de tema ------>
+        <!----- cambio de tema ------>
         <div>
-            <button id="btn-tema" onclick="cambiarTema()" class="btn btn-outline-secondary rounded-circle p-2" title="Cambiar tema">
+            <button id="btn-tema" onclick="cambiarTema()" class="btn btn-outline-secondary rounded-circle p-2"
+                title="Cambiar tema">
                 <i id="icon_tema" class="bi bi-moon-fill"></i>
             </button>
         </div>
-        
+
     </div>
     <script src="../js/tema.js"></script>
     <script src="../js/ini_sesion.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 
 
 </body>

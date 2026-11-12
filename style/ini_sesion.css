@@ -10,8 +10,33 @@
     --bs-warning: var(--chocolate-brown);
     --bs-warning-rgb: 153, 88, 42;
 }
-.border-primary:{ 
-    --bs-border-color: var(--camel);
+
+[data-bs-theme="dark"] {
+  /* Fondo principal (un café muy oscuro) */
+  --bs-body-bg: #2b1710;
+  --bs-body-bg-rgb: 30, 22, 17;
+
+  /* Color del texto principal (un tono crema suave para mejor lectura) */
+  --bs-body-color: #f3ece7;
+  --bs-body-color-rgb: 243, 236, 231;
+
+  /* Fondos secundarios (para tarjetas, modales, inputs y barras de navegación) */
+  --bs-tertiary-bg: #2b2019;
+  --bs-tertiary-bg-rgb: 43, 32, 25;
+  
+  --bs-secondary-bg: #362820;
+  --bs-secondary-bg-rgb: 54, 40, 32;
+
+  /* Color de los bordes y líneas divisorias */
+  --bs-border-color: #4a382d;
+  --bs-border-color-translucent: rgba(243, 236, 231, 0.15);
+}
+
+
+
+
+.border-primary{ 
+    border-color: var(--camel);
 }
 .text-primary{
     --bs-text-color: var(--camel);
