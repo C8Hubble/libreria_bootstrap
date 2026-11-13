@@ -10,525 +10,429 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
         defer></script>
-    <link rel="stylesheet" href="../style/administrador_styles.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../style/administrador_styles.css">
 </head>
 
 <body>
-    <header class="bg-white border-bottom px-3 px-lg-4 py-3">
-        <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-            <div class="nav">
-                <a href="/index.html" class="text-decoration-none">Portal Público</a>
-                <span class="text-secondary mx-2">/</span>
-                <strong>Administración Central</strong>
-            </div>
-            <div class="d-flex align-items-center gap-3">
-                <button type="button" class="btn border btn-sm tema" aria-label="Cambiar tema">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-sun"
-                        viewBox="0 0 16 16">
-                        <path
-                            d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
-                    </svg>
-                </button>
-                <div class="text-end">
-                    <div class="fw-semibold name"><span>Lic. M. Pepito</span></div>
-                    <div class="small text-secondary posicion"><span>Jefe de Circulación</span></div>
-                </div>
-                <span class="badge p-2 user">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-person-fill" viewBox="0 0 16 16">
-                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                    </svg>
-                </span>
-            </div>
-        </div>
-    </header>
-    <main>
-        <div class="container-fluid px-3 px-lg-4 py-4">
-            <!--Panel de control-->
-            <section id="resumen" class="mb-4">
-                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
-                    <div class="d-flex align-items-center gap-3">
-                        <span class="badge p-3 boton-security d-line-flex align-items-center justify-content-center fw-bold">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                class="bi bi-shield-lock" viewBox="0 0 16 16">
-                                <path
-                                    d="M5.338 1.59a61 61 0 0 0-2.837.856.48.48 0 0 0-.328.39c-.554 4.157.726 7.19 2.253 9.188a10.7 10.7 0 0 0 2.287 2.233c.346.244.652.42.893.533q.18.085.293.118a1 1 0 0 0 .101.025 1 1 0 0 0 .1-.025q.114-.034.294-.118c.24-.113.547-.29.893-.533a10.7 10.7 0 0 0 2.287-2.233c1.527-1.997 2.807-5.031 2.253-9.188a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.8 11.8 0 0 1-2.517 2.453 7 7 0 0 1-1.048.625c-.28.132-.581.24-.829.24s-.548-.108-.829-.24a7 7 0 0 1-1.048-.625 11.8 11.8 0 0 1-2.517-2.453C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 63 63 0 0 1 5.072.56" />
-                                <path
-                                    d="M9.5 6.5a1.5 1.5 0 0 1-1 1.415l.385 1.99a.5.5 0 0 1-.491.595h-.788a.5.5 0 0 1-.49-.595l.384-1.99a1.5 1.5 0 1 1 2-1.415" />
-                            </svg>
-                        </span>
-                        <div class="sesion1">
-                            <div class="d-flex flex-wrap align-items-center gap-2 sesion">
-                                <h6 class="mb-0 fw-bold">Panel de Control General</h6>
-                                <span class="badge ">Sesión activa</span>
-                            </div>
-                            <p class="mb-0">Bienvenido, <strong>Administrador</strong></p>
-                            <p class="mb-0 small">admin@biblioweb.test · Acervo Tradicional BiblioWeb</p>
+    <div>
+        
+        <div class="row vw-100">
+            <div class="col-md-10 order-md-2">
+                
+                <header class="border-bottom px-3 px-lg-4 py-3">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div class="nav">
+                            <a href="/index.html" class="text-decoration-none">Portal Público</a>
+                            <span class="text-secondary mx-2">/</span>
+                            <strong>Administración Central</strong>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div>
+                                <button id="btn-tema" onclick="cambiarTema()"
+                                class="btn border-2 p-2" title="Cambiar tema">
+                                <i id="icon_tema" class="bi bi-moon-fill"></i>
+                            </button>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-semibold name"><span>Lic. M. Pepito</span></div>
+                            <div class="small text-secondary posicion"><span>Jefe de Circulación</span></div>
+                        </div>
+                        <span class="badge p-2 user">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                </svg>
+                            </span>
                         </div>
                     </div>
-                    <div class="d-flex flex-wrap align-items-center gap-2 fw-bold close-sesion">
-                        <button type="button" class="btn d-flex align-items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="currentColor"
-                                class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd"
-                                    d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
-                                <path fill-rule="evenodd"
-                                    d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
-                            </svg>Cerrar sesión
-                        </button>
+                </header>
+                <main>
+                    <div class="container-fluid px-3 px-lg-4 py-4">
+                        <!--Panel de control-->
+                        <section id="resumen" class="mb-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span
+                                        class="badge p-3 boton-security d-line-flex align-items-center justify-content-center fw-bold">
+                                        <i class="bi bi-shield-lock fs-5"></i>
+                                    </span>
+                                    <div class="sesion1">
+                                        <div class="d-flex flex-wrap align-items-center gap-2 sesion">
+                                            <h6 class="mb-0 fw-bold">Panel de Control General</h6>
+                                            <span class="badge ">Sesión activa</span>
+                                        </div>
+                                        <p class="mb-0">Bienvenido, <strong>Administrador</strong></p>
+                                        <p class="mb-0 small">admin@biblioweb.test · Acervo Tradicional BiblioWeb</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-center gap-2 fw-bold close-sesion">
+                                    <button type="button" class="btn d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-right fs-3"></i>Cerrar sesión
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Indicadores-->
+                        <section class="row p-3 d-flex align-items-center Indicadores"
+                            aria-label="Indicadores generales">
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Total catálogo</h2>
+                                            <p class="fw-bold mb-0">6 Ejemplares</p>
+                                        </div>
+                                        <i
+                                            class="bi bi-book d-line-flex align-items-center justify-content-center px-2 py-2 fs-5 boton-libro"></i>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Solicitudes pendientes</h2>
+                                            <p class="fw-bold mb-0">3 Peticiones</p>
+                                        </div>
+                                        <i class="bi bi-inbox fs-5 boton-inbox px-2 py-2 d-line-flex align-items-center justify-content-center"></i>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Categorías</h2>
+                                            <p class="fw-bold mb-0">4 Áreas</p>
+                                        </div>
+                                        <i class="bi bi-boxes boton-libro px-2 py-2 fs-5"></i>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Protocolo</h2>
+                                            <p class="fw-bold mb-0">10  Protocolos</p>
+                                        </div>
+                                        <i class="bi bi-gear fs-5 boton-inbox px-2 py-2"></i>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <!--Gestión de libros-->
+                        <section id="gestion-ejemplares" class="card mb-4 mt-4">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                                    <div class="d-flex gap-3">
+                                        <i
+                                            class="bi bi-file-earmark-text px-2 py-2 gestion fw-bold fs-3"></i>
+                                        <div class="gestion-text">
+                                            <h4 class="fw-semibold mb-1">Gestión de Libros — Agregar o Modificar
+                                                Ejemplar</h4>
+                                            <p class="mb-0">
+                                                Complete la ficha técnica para registrar un nuevo ejemplar o actualizar
+                                                la
+                                                información del
+                                                catálogo bibliográfico.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <form>
+                                    <div class="row g-3 formulario">
+                                        <div class="col-md-6 ">
+                                            <label for="titulo"
+                                                class="form-label fw-semibold d-flex justify-content-between">Título
+                                                del Libro<span>(Requerido)</span></label>
+                                            <div class="input-group input2">
+                                                <span class="input-group-text"><i class="bi bi-book-half"></i></span>
+                                                <input type="text" class="form-control" id="titulo"
+                                                    placeholder="Ej: Crónica de una muerte anunciada" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="autor"
+                                                class="form-label fw-semibold d-flex justify-content-between">Autor /
+                                                Autores <span>(Requerido)</span></label>
+                                            <div class="input-group input2">
+                                                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                                <input type="text" class="form-control" id="autor"
+                                                    placeholder="Ej: Gabriel García Márquez" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="portada" class="form-label fw-semibold">URL de la
+                                                Portada</label>
+                                            <div class="input-group input2">
+                                                <span class="input-group-text"><i class="bi bi-link"></i></span>
+                                                <input type="url" class="form-control" id="portada"
+                                                    placeholder="https://biblioteca.test/portadas/ejemplo.jpg">
+                                            </div>
+                                            <div class="form-text"><span>Formatos óptimos: JPG, WebP o PNG con
+                                                    proporción editorial
+                                                    2:3
+                                                    vertical.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="categoria" class="form-label fw-semibold">Categoría Temática
+                                                <span class="text-secondary fw-normal">(Clasificación
+                                                    Dewey)</span></label>
+                                            <select class="form-select" id="categoria">
+                                                <option selected>Narrativa y Ficción</option>
+                                                <option>Tecnología</option>
+                                                <option>Ciencias Sociales</option>
+                                                <option>Historia</option>
+                                            </select>
+                                        </div>
+                                        <div class="">
+                                            <label for="descripcion" class="form-label fw-semibold">Descripción o
+                                                Sinopsis
+                                                breve</label>
+                                            <textarea class="form-control" id="descripcion" rows="4"
+                                                placeholder="Sintetice el argumento, palabras clave temáticas y el público destinatario..."></textarea>
+                                            <div class="form-text">Resumen para consulta en catálogo.</div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="d-flex flex-wrap justify-content-end gap-2">
+                                        <button type="reset" class="px-2 py-2 cancelar">
+                                            Cancelar / Limpiar
+                                        </button>
+                                        <button type="submit" class="px-2 py-2 guardar">
+                                            <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" fill="currentColor" class="bi bi-bookmark-plus"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
+                                                    <path
+                                                        d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4" />
+                                                </svg></i>Guardar Libro
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <!--Inventario-->
+                        <section id="inventario" class="card mb-4">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+                                    <div class="gestion-text">
+                                        <div class="d-flex flex-wrap align-items-center gap-2 gestion-text">
+                                            <h4 class="mb-0">Inventario Actual del Catálogo</h4>
+                                            <span class="badge inventario-span">3 registros</span>
+                                        </div>
+                                        <p class="mb-0 ">Control de acervo disponible, clasificación temática y
+                                            mantenimiento de
+                                            fichas bibliográficas.</p>
+                                    </div>
+                                    <button type="button" class="px-2 py-2 descargar-cv">
+                                        <i class="me-1 bi bi-download"></i>Exportar CSV
+                                    </button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="encabezado">
+                                            <tr>
+                                                <th scope="col">Portada</th>
+                                                <th scope="col">Título del libro</th>
+                                                <th scope="col">Autor</th>
+                                                <th scope="col">Categoría</th>
+                                                <th scope="col" class="text-nowrap">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="body-table">
+                                            <tr>
+                                                <td>
+                                                    <img src="/img/images.jpg" alt="Portada de Cien años de soledad"
+                                                        class="img-thumbnail">
+                                                </td>
+                                                <td>
+                                                    <strong>Cien Años de Soledad</strong>
+                                                    <div class="small text-secondary"><span>ISBN: 978-0307474728</span>
+                                                    </div>
+                                                </td>
+                                                <td>G. García Márquez</td>
+                                                <td><span class="badge categoria-narrativa">Narrativa</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-2 boton-editar"><i
+                                                            class="me-1 bi bi-pen"></i>Editar</button>
+                                                    <button type="button" class="px-2 py-2 boton-eliminar"><i
+                                                            class="me-1 bi bi-trash3"></i>Eliminar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="/img/clean_code.jpg" alt="Portada de Clean Code"
+                                                        class="img-thumbnail">
+                                                </td>
+                                                <td>
+                                                    <strong>Clean Code</strong>
+                                                    <div class="small text-secondary"><span>ISBN: 978-0132350884</span>
+                                                    </div>
+                                                </td>
+                                                <td>Robert C. Martin</td>
+                                                <td><span class="badge categoria_tecnologia">Tecnología</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-2 boton-editar"><i
+                                                            class="me-1 bi bi-pen"></i>Editar</button>
+                                                    <button type="button" class="px-2 py-2 boton-eliminar"><i
+                                                            class="me-1 bi bi-trash3"></i>Eliminar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="/img/noches_blancas.jpg" alt="Portada de noche blancas"
+                                                        class="img-thumbnail"></td>
+                                                <td><strong>Registro de ejemplo 3</strong>
+                                                    <div class="small text-secondary">ISBN: Pendiente</div>
+                                                </td>
+                                                <td>Autor de ejemplo</td>
+                                                <td><span class="badge categoria-narrativa">Narrativa</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-2 boton-editar"><i
+                                                            class="me-1 bi bi-pen"></i>Editar</button>
+                                                    <button type="button" class="px-2 py-2 boton-eliminar"><i
+                                                            class="me-1 bi bi-trash3"></i>Eliminar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Solicitud de prestamo-->
+                        <section id="solicitud" class="card mb-4">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+                                    <div class="gestion-text">
+                                        <div class="d-flex flex-wrap align-items-center gap-2 gestion-text">
+                                            <h4 class="mb-0">Solicitudes de Préstamo Recibidas</h4>
+                                        </div>
+                                        <p class="mb-0 ">Peticiones públicas enviadas por los lectores desde el
+                                            catálogo.</p>
+                                    </div>
+                                    <button type="button" class="px-2 py-2 buzon">
+                                        <i class="me-1 bi bi-bell"></i>Buzón del día
+                                    </button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="encabezado">
+                                            <tr>
+                                                <th scope="col">ID solicitud</th>
+                                                <th scope="col">Libro solicitado</th>
+                                                <th scope="col">Solicitante</th>
+                                                <th scope="col">Correo de contacto</th>
+                                                <th scope="col">Comentario del lector</th>
+                                                <th scope="col">Estado</th>
+                                                <th scope="col" class="text-nowrap">Gestión</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="body-table">
+                                            <tr>
+                                                <td>
+                                                    <strong>#SOL-1042</strong>
+                                                </td>
+                                                <td>
+                                                    Clean Code
+                                                </td>
+                                                <td>Sofía Morales</td>
+                                                <td><a href="mailto">smorales@alumno.edu</a></td>
+                                                <td>"Para proyecto final de taller de software"</td>
+                                                <td><span class="badge categoria-narrativa">Pendiente</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-1 boton-aprobar"><i
+                                                            class="me-1 bi bi-check2-circle"></i>Aprobar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>#SOL-1043</strong>
+                                                </td>
+                                                <td>
+                                                    Breve historia del tiempo
+                                                </td>
+                                                <td>Carlos Mendoza</td>
+                                                <td><a href="mailto">cmendoza@universidad.edu</a></td>
+                                                <td>"Consulta para cátedra de física"</td>
+                                                <td><span class="badge categoria_tecnologia">Pendiente</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-1 boton-aprobar"><i
+                                                            class="me-1 bi bi-check2-circle"></i>Aprobar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>#SOL-1044</strong>
+                                                </td>
+                                                <td>
+                                                    Cien Años de Soledad
+                                                </td>
+                                                <td>Lucía Valenzuela</td>
+                                                <td><a href="mailto">lvalenzuela@correo.com</a></td>
+                                                <td>"Lectura asignada de literatura"</td>
+                                                <td><span class="badge categoria-narrativa">Pendiente</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-1 boton-aprobar"><i
+                                                            class="me-1 bi bi-check2-circle"></i>Aprobar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
                     </div>
-                </div>
-            </section>
-            <!--Indicadores-->
-            <section class="row p-3 d-flex align-items-center Indicadores" aria-label="Indicadores generales">
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <article class="card h-100">
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <div class="Indicadores-text">
-                                <h2 class="h6 text-uppercase">Total catálogo</h2>
-                                <p class="fw-bold mb-0">6 Ejemplares</p>
-                            </div>
-                            <i class="d-line-flex align-items-center justify-content-center px-2 py-2 boton-libro"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-book" viewBox="0 0 16 16">
-                                    <path
-                                        d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                                </svg></i>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <article class="card h-100">
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <div class="Indicadores-text">
-                                <h2 class="h6 text-uppercase">Solicitudes pendientes</h2>
-                                <p class="fw-bold mb-0">3 Peticiones</p>
-                            </div>
-                            <i class="boton-inbox px-2 py-2 d-line-flex align-items-center justify-content-center"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-inbox" viewBox="0 0 16 16">
-                                    <path
-                                        d="M4.98 4a.5.5 0 0 0-.39.188L1.54 8H6a.5.5 0 0 1 .5.5 1.5 1.5 0 1 0 3 0A.5.5 0 0 1 10 8h4.46l-3.05-3.812A.5.5 0 0 0 11.02 4zm9.954 5H10.45a2.5 2.5 0 0 1-4.9 0H1.066l.32 2.562a.5.5 0 0 0 .497.438h12.234a.5.5 0 0 0 .496-.438zM3.809 3.563A1.5 1.5 0 0 1 4.981 3h6.038a1.5 1.5 0 0 1 1.172.563l3.7 4.625a.5.5 0 0 1 .105.374l-.39 3.124A1.5 1.5 0 0 1 14.117 13H1.883a1.5 1.5 0 0 1-1.489-1.314l-.39-3.124a.5.5 0 0 1 .106-.374z" />
-                                </svg></i>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <article class="card h-100">
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <div class="Indicadores-text">
-                                <h2 class="h6 text-uppercase">Categorías</h2>
-                                <p class="fw-bold mb-0">4 Áreas</p>
-                            </div>
-                            <i class="boton-libro px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" fill="currentColor" class="bi bi-boxes" viewBox="0 0 16 16">
-                                    <path
-                                        d="M7.752.066a.5.5 0 0 1 .496 0l3.75 2.143a.5.5 0 0 1 .252.434v3.995l3.498 2A.5.5 0 0 1 16 9.07v4.286a.5.5 0 0 1-.252.434l-3.75 2.143a.5.5 0 0 1-.496 0l-3.502-2-3.502 2.001a.5.5 0 0 1-.496 0l-3.75-2.143A.5.5 0 0 1 0 13.357V9.071a.5.5 0 0 1 .252-.434L3.75 6.638V2.643a.5.5 0 0 1 .252-.434zM4.25 7.504 1.508 9.071l2.742 1.567 2.742-1.567zM7.5 9.933l-2.75 1.571v3.134l2.75-1.571zm1 3.134 2.75 1.571v-3.134L8.5 9.933zm.508-3.996 2.742 1.567 2.742-1.567-2.742-1.567zm2.242-2.433V3.504L8.5 5.076V8.21zM7.5 8.21V5.076L4.75 3.504v3.134zM5.258 2.643 8 4.21l2.742-1.567L8 1.076zM15 9.933l-2.75 1.571v3.134L15 13.067zM3.75 14.638v-3.134L1 9.933v3.134z" />
-                                </svg></i>
-                        </div>
-                    </article>
-                </div>
-                <div class="col-12 col-sm-6 col-xl-3">
-                    <article class="card h-100">
-                        <div class="card-body d-flex justify-content-between align-items-center">
-                            <div class="Indicadores-text">
-                                <h2 class="h6 text-uppercase">Protocolo</h2>
-                                <p class="fw-bold mb-0">F01 · F04 · F05</p>
-                            </div>
-                            <i class="boton-inbox px-2 py-2"><svg xmlns="http://www.w3.org/2000/svg" width="24"
-                                    height="24" fill="currentColor" class="bi bi-gear" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 4.754a3.246 3.246 0 1 0 0 6.492 3.246 3.246 0 0 0 0-6.492M5.754 8a2.246 2.246 0 1 1 4.492 0 2.246 2.246 0 0 1-4.492 0" />
-                                    <path
-                                        d="M9.796 1.343c-.527-1.79-3.065-1.79-3.592 0l-.094.319a.873.873 0 0 1-1.255.52l-.292-.16c-1.64-.892-3.433.902-2.54 2.541l.159.292a.873.873 0 0 1-.52 1.255l-.319.094c-1.79.527-1.79 3.065 0 3.592l.319.094a.873.873 0 0 1 .52 1.255l-.16.292c-.892 1.64.901 3.434 2.541 2.54l.292-.159a.873.873 0 0 1 1.255.52l.094.319c.527 1.79 3.065 1.79 3.592 0l.094-.319a.873.873 0 0 1 1.255-.52l.292.16c1.64.893 3.434-.902 2.54-2.541l-.159-.292a.873.873 0 0 1 .52-1.255l.319-.094c1.79-.527 1.79-3.065 0-3.592l-.319-.094a.873.873 0 0 1-.52-1.255l.16-.292c.893-1.64-.902-3.433-2.541-2.54l-.292.159a.873.873 0 0 1-1.255-.52zm-2.633.283c.246-.835 1.428-.835 1.674 0l.094.319a1.873 1.873 0 0 0 2.693 1.115l.291-.16c.764-.415 1.6.42 1.184 1.185l-.159.292a1.873 1.873 0 0 0 1.116 2.692l.318.094c.835.246.835 1.428 0 1.674l-.319.094a1.873 1.873 0 0 0-1.115 2.693l.16.291c.415.764-.42 1.6-1.185 1.184l-.291-.159a1.873 1.873 0 0 0-2.693 1.116l-.094.318c-.246.835-1.428.835-1.674 0l-.094-.319a1.873 1.873 0 0 0-2.692-1.115l-.292.16c-.764.415-1.6-.42-1.184-1.185l.159-.291A1.873 1.873 0 0 0 1.945 8.93l-.319-.094c-.835-.246-.835-1.428 0-1.674l.319-.094A1.873 1.873 0 0 0 3.06 4.377l-.16-.292c-.415-.764.42-1.6 1.185-1.184l.292.159a1.873 1.873 0 0 0 2.692-1.115z" />
-                                </svg></i>
-                        </div>
-                    </article>
-                </div>
-            </section>
-            <!--Gestión de libros-->
-            <section id="gestion-ejemplares" class="card mb-4 mt-4">
-                <div class="card-body p-3 p-lg-4">
-                    <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
-                        <div class="d-flex gap-3">
-                            <i class="px-2 py-2 gestion fw-bold d-line-flex align-items-center justify-content-center"><svg
-                                    xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
-                                    class="bi bi-file-earmark-text" viewBox="0 0 16 16">
-                                    <path
-                                        d="M5.5 7a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1zM5 9.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5m0 2a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2a.5.5 0 0 1-.5-.5" />
-                                    <path
-                                        d="M9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V4.5zm0 1v2A1.5 1.5 0 0 0 11 4.5h2V14a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1z" />
-                                </svg></i>
-                            <div class="gestion-text">
-                                <h5 class="fw-semibold mb-1">Gestión de Libros — Agregar o Modificar Ejemplar</h5>
-                                <p class="mb-0">
-                                    Complete la ficha técnica para registrar un nuevo ejemplar o actualizar la
-                                    información del
-                                    catálogo bibliográfico.
+                </main>
+                <footer>
+                    <div class="row">
+                        <div class="col-md-10 ">
+                            <div class="d-flex justify-content-between text-align-center p-3">
+                                <p class="copy-text">© 2025 BiblioWeb. Todos los derechos reservados.
                                 </p>
+                                <p>Red de Bibliotecas Universitarias.</p>
+                                <p class="">Norma ISO 2709 / MARC21</p>
                             </div>
                         </div>
                     </div>
-                    <hr>
-                    <form>
-                        <div class="row g-3 formulario">
-                            <div class="col-md-6 ">
-                                <label for="titulo" class="form-label fw-semibold d-flex justify-content-between">Título
-                                    del Libro<span>(Requerido)</span></label>
-                                <div class="input-group input2">
-                                    <span class="input-group-text"><i class=""><svg xmlns="http://www.w3.org/2000/svg"
-                                                width="16" height="16" fill="currentColor" class="bi bi-book-half"
-                                                viewBox="0 0 16 16">
-                                                <path
-                                                    d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                                            </svg></i></span>
-                                    <input type="text" class="form-control" id="titulo"
-                                        placeholder="Ej: Crónica de una muerte anunciada" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="autor" class="form-label fw-semibold d-flex justify-content-between">Autor /
-                                    Autores <span>(Requerido)</span></label>
-                                <div class="input-group input2">
-                                    <span class="input-group-text"><i class="bi bi-person"><svg
-                                                xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                                            </svg></i></span>
-                                    <input type="text" class="form-control" id="autor"
-                                        placeholder="Ej: Gabriel García Márquez" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="portada" class="form-label fw-semibold">URL de la Portada</label>
-                                <div class="input-group input2">
-                                    <span class="input-group-text"><i><svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                height="16" fill="currentColor" class="bi bi-link" viewBox="0 0 16 16">
-                                                <path
-                                                    d="M6.354 5.5H4a3 3 0 0 0 0 6h3a3 3 0 0 0 2.83-4H9q-.13 0-.25.031A2 2 0 0 1 7 10.5H4a2 2 0 1 1 0-4h1.535c.218-.376.495-.714.82-1z" />
-                                                <path
-                                                    d="M9 5.5a3 3 0 0 0-2.83 4h1.098A2 2 0 0 1 9 6.5h3a2 2 0 1 1 0 4h-1.535a4 4 0 0 1-.82 1H12a3 3 0 1 0 0-6z" />
-                                            </svg></i></span>
-                                    <input type="url" class="form-control" id="portada"
-                                        placeholder="https://biblioteca.test/portadas/ejemplo.jpg">
-                                </div>
-                                <div class="form-text"><span>Formatos óptimos: JPG, WebP o PNG con proporción editorial
-                                        2:3
-                                        vertical.</span>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <label for="categoria" class="form-label fw-semibold">Categoría Temática <span
-                                        class="text-secondary fw-normal">(Clasificación Dewey)</span></label>
-                                <select class="form-select" id="categoria">
-                                    <option selected>Narrativa y Ficción</option>
-                                    <option>Tecnología</option>
-                                    <option>Ciencias Sociales</option>
-                                    <option>Historia</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label for="descripcion" class="form-label fw-semibold">Descripción o Sinopsis
-                                    breve</label>
-                                <textarea class="form-control" id="descripcion" rows="4"
-                                    placeholder="Sintetice el argumento, palabras clave temáticas y el público destinatario..."></textarea>
-                                <div class="form-text">Resumen para consulta en catálogo.</div>
-                            </div>
-                        </div>
-                        <hr class="my-4">
-                        <div class="d-flex flex-wrap justify-content-end gap-2">
-                            <button type="reset" class="px-2 py-2 cancelar">
-                                Cancelar / Limpiar
-                            </button>
-                            <button type="submit" class="px-2 py-2 guardar">
-                                <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                        fill="currentColor" class="bi bi-bookmark-plus" viewBox="0 0 16 16">
-                                        <path
-                                            d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
-                                        <path
-                                            d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4" />
-                                    </svg></i>Guardar Libro
-                            </button>
-                        </div>
-                    </form>
+                </footer>
+            </div>
+            <!-- Menú lateral -->
+            <aside class="col-md-2 order-md-1 position-sticky top-0 vh-100 overflow-auto text-white aside_bg d-flex flex-column">
+                <div class="p-3 border-bottom border-secondary aside_text">
+                    <img src="" alt="">
+                    <a href="/index.html" class="text-decoration-none fw-bold text-title">
+                        <i class="bi bi-book-half me-2"></i>BiblioWeb
+                    </a>
+                    <div class="small text-uppercase text-secondary"><span> Panel docente / admin</span></div>
                 </div>
-            </section>
-            <!--Inventario-->
-            <section id="inventario" class="card mb-4">
-                <div class="card-body p-3 p-lg-4">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
-                        <div class="gestion-text">
-                            <div class="d-flex flex-wrap align-items-center gap-2 gestion-text">
-                                <h5 class="mb-0">Inventario Actual del Catálogo</h5>
-                                <span class="badge inventario-span">3 registros</span>
-                            </div>
-                            <p class="mb-0 ">Control de acervo disponible, clasificación temática y
-                                mantenimiento de
-                                fichas bibliográficas.</p>
-                        </div>
-                        <button type="button" class="px-2 py-2 descargar-cv">
-                            <i class="me-1"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                    fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                                    <path
-                                        d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5" />
-                                    <path
-                                        d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z" />
-                                </svg></i>Exportar CSV
-                        </button>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0">
-                            <thead class="encabezado">
-                                <tr>
-                                    <th scope="col">Portada</th>
-                                    <th scope="col">Título del libro</th>
-                                    <th scope="col">Autor</th>
-                                    <th scope="col">Categoría</th>
-                                    <th scope="col" class="text-nowrap">Acciones</th>
-                                </tr>
-                            </thead>
-                            <tbody class="body-table">
-                                <tr>
-                                    <td>
-                                        <img src="/img/images.jpg" alt="Portada de Cien años de soledad"
-                                            class="img-thumbnail">
-                                    </td>
-                                    <td>
-                                        <strong>Cien Años de Soledad</strong>
-                                        <div class="small text-secondary"><span>ISBN: 978-0307474728</span></div>
-                                    </td>
-                                    <td>G. García Márquez</td>
-                                    <td><span class="badge categoria-narrativa">Narrativa</span></td>
-                                    <td class="text-nowrap">
-                                        <button type="button" class="px-2 py-2 boton-editar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                                </svg></i>Editar</button>
-                                        <button type="button" class="px-2 py-2 boton-eliminar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
-                                                </svg></i>Eliminar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <img src="/img/clean_code.jpg" alt="Portada de Clean Code"
-                                            class="img-thumbnail">
-                                    </td>
-                                    <td>
-                                        <strong>Clean Code</strong>
-                                        <div class="small text-secondary"><span>ISBN: 978-0132350884</span></div>
-                                    </td>
-                                    <td>Robert C. Martin</td>
-                                    <td><span class="badge categoria_tecnologia">Tecnología</span></td>
-                                    <td class="text-nowrap">
-                                        <button type="button" class="px-2 py-2 boton-editar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                                </svg></i>Editar</button>
-                                        <button type="button" class="px-2 py-2 boton-eliminar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
-                                                </svg></i>Eliminar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td><img src="/img/noches_blancas.jpg" alt="Portada de noche blancas"
-                                            class="img-thumbnail"></td>
-                                    <td><strong>Registro de ejemplo 3</strong>
-                                        <div class="small text-secondary">ISBN: Pendiente</div>
-                                    </td>
-                                    <td>Autor de ejemplo</td>
-                                    <td><span class="badge categoria-narrativa">Narrativa</span></td>
-                                    <td class="text-nowrap">
-                                        <button type="button" class="px-2 py-2 boton-editar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001m-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708z" />
-                                                </svg></i>Editar</button>
-                                        <button type="button" class="px-2 py-2 boton-eliminar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-trash3" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5M11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47M8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5" />
-                                                </svg></i>Eliminar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                <nav class="nav flex-column p-2 gap-2 aside-nav" aria-label="Menú principal">
+                    <a class="nav-link active nav-hover" href="#resumen">
+                        <i class="me-2 bi bi-bar-chart-steps"></i>Resumen General
+                    </a>
+                    <a class="nav-link nav-hover" href="#gestion-ejemplares">
+                        <i class="me-2 bi bi-archive"></i>Gestión de Ejemplares
+                    </a>
+                    <a class="nav-link nav-hover" href="#inventario">
+                        <i class="me-2 bi bi-card-list"></i>Inventario
+                    </a>
+                    <a class="nav-link nav-hover" href="#solicitud">
+                        <i class="me-2 bi bi-book-half"></i>Circulación y Préstamos
+                    </a>
+                </nav>
+                <div class="mt-auto p-3 border-top border-secondary">
+                    <a href="/pages/cerrar_sesion.html" class="nav-link cerrar-sesion">
+                        <i class="me-2 bi bi-box-arrow-right"></i>Cerrar sesión
+                    </a>
                 </div>
-            </section>
-            <!--Solicitud de prestamo-->
-            <section id="solicitud" class="card mb-4">
-                <div class="card-body p-3 p-lg-4">
-                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
-                        <div class="gestion-text">
-                            <div class="d-flex flex-wrap align-items-center gap-2 gestion-text">
-                                <h5 class="mb-0">Solicitudes de Préstamo Recibidas</h5>
-                            </div>
-                            <p class="mb-0 ">Peticiones públicas enviadas por los lectores desde el catálogo.</p>
-                        </div>
-                        <button type="button" class="px-2 py-2 buzon">
-                            <i class="me-1"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                    fill="currentColor" class="bi bi-bell" viewBox="0 0 16 16">
-                                    <path
-                                        d="M8 16a2 2 0 0 0 2-2H6a2 2 0 0 0 2 2M8 1.918l-.797.161A4 4 0 0 0 4 6c0 .628-.134 2.197-.459 3.742-.16.767-.376 1.566-.663 2.258h10.244c-.287-.692-.502-1.49-.663-2.258C12.134 8.197 12 6.628 12 6a4 4 0 0 0-3.203-3.92zM14.22 12c.223.447.481.801.78 1H1c.299-.199.557-.553.78-1C2.68 10.2 3 6.88 3 6c0-2.42 1.72-4.44 4.005-4.901a1 1 0 1 1 1.99 0A5 5 0 0 1 13 6c0 .88.32 4.2 1.22 6" />
-                                </svg></i>Buzón del día
-                        </button>
-                    </div>
-                    <div class="table-responsive">
-                        <table class="table table-hover align-middle mb-0">
-                            <thead class="encabezado">
-                                <tr>
-                                    <th scope="col">ID solicitud</th>
-                                    <th scope="col">Libro solicitado</th>
-                                    <th scope="col">Solicitante</th>
-                                    <th scope="col">Correo de contacto</th>
-                                    <th scope="col">Comentario del lector</th>
-                                    <th scope="col">Estado</th>
-                                    <th scope="col" class="text-nowrap">Gestión</th>
-                                </tr>
-                            </thead>
-                            <tbody class="body-table">
-                                <tr>
-                                    <td>
-                                        <strong>#SOL-1042</strong>
-                                    </td>
-                                    <td>
-                                        Clean Code
-                                    </td>
-                                    <td>Sofía Morales</td>
-                                    <td><a href="mailto">smorales@alumno.edu</a></td>
-                                    <td>"Para proyecto final de taller de software"</td>
-                                    <td><span class="badge categoria-narrativa">Pendiente</span></td>
-                                    <td class="text-nowrap">
-                                        <button type="button" class="px-2 py-1 boton-aprobar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
-                                                    <path
-                                                        d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
-                                                </svg></i>Aprobar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>#SOL-1043</strong>
-                                    </td>
-                                    <td>
-                                        Breve historia del tiempo
-                                    </td>
-                                    <td>Carlos Mendoza</td>
-                                    <td><a href="mailto">cmendoza@universidad.edu</a></td>
-                                    <td>"Consulta para cátedra de física"</td>
-                                    <td><span class="badge categoria_tecnologia">Pendiente</span></td>
-                                    <td class="text-nowrap">
-                                        <button type="button" class="px-2 py-1 boton-aprobar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
-                                                    <path
-                                                        d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
-                                                </svg></i>Aprobar</button>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <strong>#SOL-1044</strong>
-                                    </td>
-                                    <td>
-                                        Cien Años de Soledad
-                                    </td>
-                                    <td>Lucía Valenzuela</td>
-                                    <td><a href="mailto">lvalenzuela@correo.com</a></td>
-                                    <td>"Lectura asignada de literatura"</td>
-                                    <td><span class="badge categoria-narrativa">Pendiente</span></td>
-                                    <td class="text-nowrap">
-                                        <button type="button" class="px-2 py-1 boton-aprobar"><i class="me-1"><svg
-                                                    xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                                    fill="currentColor" class="bi bi-check2-circle" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M2.5 8a5.5 5.5 0 0 1 8.25-4.764.5.5 0 0 0 .5-.866A6.5 6.5 0 1 0 14.5 8a.5.5 0 0 0-1 0 5.5 5.5 0 1 1-11 0" />
-                                                    <path
-                                                        d="M15.354 3.354a.5.5 0 0 0-.708-.708L8 9.293 5.354 6.646a.5.5 0 1 0-.708.708l3 3a.5.5 0 0 0 .708 0z" />
-                                                </svg></i>Aprobar</button>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-            </section>
+            </aside>
         </div>
-    </main>
-    <!-- Menú lateral -->
-    <aside class="col-md-3 order-md-1 position-sticky top-0 vh-100 overflow-auto text-white aside_bg">
-        <div class="p-3 border-bottom border-secondary aside_text">
-            <img src="" alt="">
-            <a href="/index.html" class="text-decoration-none fw-bold text-title">
-                <i class="bi bi-book-half me-2"></i>BiblioWeb
-            </a>
-            <div class="small text-uppercase text-secondary"><span> Panel docente / admin</span></div>
-        </div>
-        <nav class="nav flex-column p-2 gap-2 aside-nav" aria-label="Menú principal">
-            <a class="nav-link active nav-hover" href="#resumen">
-                <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-bar-chart-steps" viewBox="0 0 16 16">
-                        <path
-                            d="M.5 0a.5.5 0 0 1 .5.5v15a.5.5 0 0 1-1 0V.5A.5.5 0 0 1 .5 0M2 1.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-4a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h6a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-6a.5.5 0 0 1-.5-.5zm2 4a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-7a.5.5 0 0 1-.5-.5z" />
-                    </svg></i>Resumen General
-            </a>
-            <a class="nav-link nav-hover" href="#gestion-ejemplares">
-                <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-archive" viewBox="0 0 16 16">
-                        <path
-                            d="M0 2a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1v7.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 12.5V5a1 1 0 0 1-1-1zm2 3v7.5A1.5 1.5 0 0 0 3.5 14h9a1.5 1.5 0 0 0 1.5-1.5V5zm13-3H1v2h14zM5 7.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1-.5-.5" />
-                    </svg></i>Gestión de Ejemplares
-            </a>
-            <a class="nav-link nav-hover" href="#inventario">
-                <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-card-list" viewBox="0 0 16 16">
-                        <path
-                            d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2z" />
-                        <path
-                            d="M5 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 8m0-2.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0 5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m-1-5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0M4 8a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0m0 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0" />
-                    </svg></i>Inventario
-            </a>
-            <a class="nav-link nav-hover" href="#solicitud">
-                <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-book-half" viewBox="0 0 16 16">
-                        <path
-                            d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783" />
-                    </svg></i>Circulación y Préstamos
-            </a>
-        </nav>
-        <div class="mt-auto p-3 border-top border-secondary">
-            <a href="/pages/cerrar_sesion.html" class="nav-link text-light">
-                <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                        class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z" />
-                        <path fill-rule="evenodd"
-                            d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z" />
-                    </svg></i>Cerrar sesión
-            </a>
-        </div>
-    </aside>
-    <footer>
-    </footer>
+    </div>
+    <script src="../js/tema.js"></script>
 </body>
 
 </html>

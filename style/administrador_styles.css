@@ -1,11 +1,51 @@
-:root{
+:root {
     --color-text-principal: #432818ff;
     --color-text-sencundary: #99582aff;
     --color-boton-primary: #6f1d1bff;
     --color-boton-secundary: #bb9457ff;
     --color-fondo-principal: #ffe6a7ff;
+    --color-shadown-card: #ffe6a7ff;
+    --cerrar-sesion: #f3ece7;
 }
 
+[data-bs-theme="dark"] {
+
+    /* Textos */
+    --color-text-principal: #f3ece7;
+    --color-text-sencundary: #d6a477;
+
+    /* Botones */
+    --color-boton-primary: #a65b55;
+    --color-boton-secundary: #e0bc7a;
+
+    /* Fondos */
+    --color-fondo-principal: #2b1710;
+
+    /* Variables Bootstrap */
+    --bs-body-bg: #2b1710;
+    --bs-body-bg-rgb: 43, 23, 16;
+
+    --bs-body-color: #f3ece7;
+    --bs-body-color-rgb: 243, 236, 231;
+
+    --bs-tertiary-bg: #2b2019;
+    --bs-tertiary-bg-rgb: 43, 32, 25;
+
+    --bs-secondary-bg: #362820;
+    --bs-secondary-bg-rgb: 54, 40, 32;
+
+    --bs-border-color: #5a4032;
+    --bs-border-color-translucent: rgba(243, 236, 231, 0.15);
+    --bs-shadown:var(--bs-tertiary-bg);
+    --color-shadown-card: #000000;
+    --cerrar-sesion: #2b1710;
+}
+
+
+#btn-tema:hover{
+    transform: scale(1.2) ;
+    color: var(--color-text-principal);
+}
 
 .nav a{
     color: var(--color-text-sencundary);
@@ -49,7 +89,7 @@
 .sesion span{
     background-color: #ffe6a7ff;
     border: 1px solid var(--color-boton-secundary);
-    color: var(--color-text-principal);
+    color: #432818ff;
 }
 
 .sesion1 p{
@@ -66,6 +106,7 @@
     height: 60px;
     text-transform: uppercase;
     width: 150px;
+
     
 }
 
@@ -74,10 +115,6 @@
     color: white;
 }
 
-.Indicadores{
-    background-color: rgba(255, 230, 167, 0.43);
-    border-radius: 5px;
-}
 
 .Indicadores-text h2{
     color: var(--color-text-sencundary);
@@ -86,6 +123,10 @@
 .Indicadores-text p{
     font-family: 'Times New Roman', Times, serif;
     color: var(--color-text-principal);
+}
+
+.indicadores2{
+    box-shadow: 5px 5px 10px 0px var(--color-shadown-card);
 }
 
 .boton-libro{
@@ -109,10 +150,10 @@
     height: 55px;
 }
 
-.gestion-text h5{
+.gestion-text h4{
     color: var(--color-text-principal);
     font-family: 'Times New Roman', Times, serif;
-    font-size: small;
+    font-size: medium;
 }
 
 .gestion-text p{
@@ -172,7 +213,7 @@
 
 .inventario-span{
     background-color: rgba(255, 230, 167, 0.689);
-    color: var(--color-text-principal);
+    color: #2b1710;
 }
 
 .descargar-cv{
@@ -202,13 +243,13 @@
 .categoria-narrativa{
     background-color: #ffe6a7ff;
     border: 1px solid var(--color-boton-primary);
-    color: var(--color-text-principal);
+    color: #2b1710;
 }
 
 .boton-editar{
     background-color: rgba(243, 173, 61, 0.289);
     color: var(--color-text-sencundary);
-    border: 1px solid var(--color-text-principal);
+    border: 1px solid #99582aff;
     border-radius: 10px;
     font-weight: 700;
 }
@@ -229,7 +270,7 @@
 
 .buzon{
     background-color: rgba(255, 230, 167, 0.601);
-    color: var(--color-text-principal);
+    color: #432818ff;
     font-weight: 700;
     border: 1px solid var(--color-boton-secundary);
     border-radius: 10px;
@@ -271,4 +312,12 @@
 .nav-hover:hover{
     background-color: var(--color-boton-primary);
     color: var(--color-fondo-principal);
+}
+
+.footer-bottom{
+    background-color: rgba(255, 230, 167, 0.437);
+}
+
+.cerrar-sesion{
+    color: var(--cerrar-sesion);
 }
