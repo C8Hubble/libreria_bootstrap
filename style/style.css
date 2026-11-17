@@ -5,8 +5,14 @@
   --dark-coffee: #432818ff;
   --chocolate-brown: #99582aff;
   --light-apricot: #f9e9e6;
-}
 
+  --bs-primary: var(--dark-wine);
+  --bs-primary-rgb: 111, 29, 27;
+}
+.bg-primary {
+  --bs-bg-color: var(--dark-wine)
+  
+}
 
 body {
   margin: 0;
