@@ -10,13 +10,35 @@
 </head>
 
 <body>
-    <header class="barras w-100">
-        <div class="container barras2 ">
-            <div class="barra1">Fondo Bibliográfico General/<strong>Consulta abierta</strong>
+    <header id="navbar">
+    <div class="contenedor-bloque nav-container">
+        <div class="nav-brand">
+            <img src="../img/biblioteca.png" alt="BiblioWeb" width="40" height="40" class="logo">
+            <div class="brand-text">
+                <span class="brand-title">BiblioWeb</span>
+                <span class="brand-subtitle">BIBLIOTECA ACADÉMICA</span>
             </div>
-            <div class="barra2 ">Préstamos Activos sin registro | Disponibilidad en sala: 95%</div>
         </div>
+        <nav class="nav">
+            <a href="#" class="active">INICIO</a>
+            <a href="#servicios">CATÁLOGO</a>
+        </nav>
+        <div class="search">
+            <input type="search" name="buscar" id="busqueda">
+        </div>
+        <div class="admin">
+            <button type="button" id="color" value="claro" onclick="cambiarColor()" aria-label="Cambiar tema">
+                <img id="icono-tema" src="../img/soleado.png" alt="Modo claro" width="20" height="20">
+            </button>
+            <a href="admin.html" class="btn btn-admin fw-bold px-3 py-1">Acceso Admin</a>
+            <button type="button" class="btn-avatar" aria-label="Perfil de usuario">
+                <img src="../img/usuario.png" alt="Usuario" width="18" height="18">
+            </button>
+        </div>
+
+    </div>
     </header>
+
     <main class="container">
 
         <div class="intro d-flex ">
