@@ -5,7 +5,7 @@ function validarLoginA() {
    
     if (usuario1 == "admin@biblioweb.test" && clave2 == "Admin123") {
         sessionStorage.setItem('auth', '1');
-        window.location.href = "../index.html";
+        window.location.href = "../pages/administrador.html";
         return false;
 
     } else {

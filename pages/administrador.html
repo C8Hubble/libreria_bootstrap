@@ -29,7 +29,7 @@
                         </div>
                         <div class="d-flex align-items-center gap-3">
                             <div>
-                                <button id="btn-tema" onclick="cambiarTema()"
+                                <button id="btn-tema" onclick="cambiarColor()"
                                 class="btn border-2 p-2" title="Cambiar tema">
                                 <i id="icon_tema" class="bi bi-moon-fill"></i>
                             </button>
@@ -67,7 +67,7 @@
                                     </div>
                                 </div>
                                 <div class="d-flex flex-wrap align-items-center gap-2 fw-bold close-sesion">
-                                    <button type="button" class="btn d-flex align-items-center gap-2">
+                                    <button type="button" class="btn d-flex align-items-center gap-2" onclick="cerrarSesion()">
                                         <i class="bi bi-box-arrow-right fs-3"></i>Cerrar sesión
                                     </button>
                                 </div>
@@ -425,14 +425,15 @@
                     </a>
                 </nav>
                 <div class="mt-auto p-3 border-top border-secondary">
-                    <a href="" class="nav-link cerrar-sesion">
+                    <button href="" class="nav-link cerrar-sesion" onclick="cerrarSesion()">
                         <i class="me-2 bi bi-box-arrow-right"></i>Cerrar sesión
-                    </a>
+                    </button>
                 </div>
             </aside>
         </div>
     </div>
-    <script src="../js/tema.js"></script>
+    <script src="../js/tema_index.js"></script>
+    <script src="../js/ini_sesion.js"></script>
 </body>
 
 </html>
