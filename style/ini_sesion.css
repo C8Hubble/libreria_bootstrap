@@ -36,7 +36,7 @@
 
 
 .border-primary{ 
-    border-color: var(--camel);
+    --border-color: var(--camel);
 }
 .text-primary{
     --bs-text-color: var(--camel);
