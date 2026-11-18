@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="	https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <title>Catalogo</title>
+    <link rel="stylesheet" href="../style/style.css">
+</head>
+
+<body>
+    <header id="navbar">
+    <div class="contenedor-bloque nav-container">
+        <div class="nav-brand">
+            <img src="../img/biblioteca.png" alt="BiblioWeb" width="40" height="40" class="logo">
+            <div class="brand-text">
+                <span class="brand-title">BiblioWeb</span>
+                <span class="brand-subtitle">BIBLIOTECA ACADÉMICA</span>
+            </div>
+        </div>
+        <nav class="nav">
+            <a href="#" class="active">INICIO</a>
+            <a href="#catalogo">CATÁLOGO</a>
+        </nav>
+        <div class="search">
+            <input type="search" name="buscar" id="busqueda">
+        </div>
+        <div class="admin">
+            <button type="button" id="color" value="claro" onclick="cambiarColor()" aria-label="Cambiar tema">
+                <img id="icono-tema" src="../img/soleado.png" alt="Modo claro" width="20" height="20">
+            </button>
+            <a href="admin.html" class="btn btn-admin fw-bold px-3 py-1">Acceso Admin</a>
+            <button type="button" class="btn-avatar" aria-label="Perfil de usuario">
+                <img src="../img/usuario.png" alt="Usuario" width="18" height="18">
+            </button>
+        </div>
+
+    </div>
+    </header>
+
+    <main class="container">
+
+        <div class="intro d-flex ">
+            <div class="texto">
+
+                <div class="row px-2"> <!-- cuadro blanco y imagen -->
+                    <p class="etiqueta"> --- REPOSITORIO Y CIRCULACIÓN</p>
+                    <div class="col-md-8">
+                        <h1>Catálogo General de Libros</h1>
+                        <p class="descripcion"> Explora nuestra colección académica.
+                            Puedes simular la solicitud de préstamo cualquier ejemplar
+                            sin necesidad de crear una cuenta o registrarte.</p>
+                    </div>
+                    <div class="col-md-4 bg-white">
+                        <p>ESTADO DEL FONDO</p>
+                        <p><strong class="display-6">6</strong> Títulos clave</p>
+                        <img src="../img/grafica.jpg" alt="">
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        </div>
+
+
+        <section class="filtros"> <!-- filtros y botones -->
+            <div class="botones">
+                <button class="activo">Todos 6</button>
+                <button>Narrativa 2</button>
+                <button>Tecnología 2</button>
+                <button>Ciencia 2</button>
+            </div>
+            <div class="info-prestamo">
+                Visualizando colección pública
+                <div class="dias">Préstamo: 7 Días hábiles</div>
+            </div>
+        </section>
+
+
+
+        <section class="libros" id="catalogo"> <!-- libros -->
+
+
+            <div class="tarjeta shadow">
+                <div class="tarjeta-arriba">
+                    <div class="categoria">NARRATIVA</div>
+                    <div class="codigo">N-GGM-01</div>
+                </div>
+                <img src="../img/cien_anos.jpg" alt="Cien Años de Soledad">
+                <div class="tarjeta-info">
+                    <p class="dewey">DEWEY: 863.64 • Edición 1967</p>
+                    <h2>Cien Años de Soledad</h2>
+                    <p class="autor">Gabriel García Márquez</p>
+                    <p class="resumen">La obra cumbre del realismo mágico y la epopeya de la familia Buendía en
+                        Macondo.
+                    </p>
+                </div>
+                <div class="tarjeta-abajo">
+                    <div>✓ Ejemplar en Sala</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#cien">Solicitar préstamo</button>
+                </div>
+            </div>
+
+
+
+            <div class="tarjeta shadow">
+                <div class="tarjeta-arriba">
+                    <div class="categoria">TECNOLOGÍA</div>
+                    <div class="codigo">T-RCM-02</div>
+                </div>
+                <img src="../img/clean-code.webp" alt="Clean Code">
+                <div class="tarjeta-info">
+                    <p class="dewey">DEWEY: 005.1 • Prentice Hall 2008</p>
+                    <h2>Clean Code: Manual de desarrollo ágil</h2>
+                    <p class="autor">Robert C. Martin</p>
+                    <p class="resumen">Principios y buenas prácticas para escribir software legible y fácil de
+                        mantener.
+                    </p>
+                </div>
+                <div class="tarjeta-abajo">
+                    <div>✓ Ejemplar en Sala</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#code">Solicitar préstamo</button>
+                </div>
+            </div>
+
+
+
+            <div class="tarjeta shadow">
+                <div class="tarjeta-arriba">
+                    <div class="categoria">CIENCIA</div>
+                    <div class="codigo">C-SH-03</div>
+                </div>
+                <img src="../img/breve-historia.jpg" alt="La teoría del todo" style="background-color: burlywood;">
+                <div class="tarjeta-info">
+                    <p class="dewey">DEWEY: 523.1 • Bantam Books 1988</p>
+                    <h2>La teoría del todo</h2>
+                    <p class="autor">Stephen Hawking</p>
+                    <p class="resumen">Un recorrido accesible por el cosmos, los agujeros negros y el origen del
+                        universo.
+                    </p>
+                </div>
+                <div class="tarjeta-abajo">
+                    <div>✓ Ejemplar en Sala</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#teoria">Solicitar préstamo</button>
+                </div>
+            </div>
+
+
+
+            <div class="tarjeta shadow">
+                <div class="tarjeta-arriba">
+                    <div class="categoria">NARRATIVA</div>
+                    <div class="codigo">N-MDC-04</div>
+                </div>
+                <img src="../img/quijote.jpg" alt="Don Quijote de la Mancha">
+                <div class="tarjeta-info">
+                    <p class="dewey">DEWEY: 863.3 • Edición 1605</p>
+                    <h2>Don Quijote de la Mancha</h2>
+                    <p class="autor">Miguel de Cervantes</p>
+                    <p class="resumen">Las aventuras del hidalgo que quiso ser caballero andante. Clásico de la
+                        lengua española.</p>
+                </div>
+                <div class="tarjeta-abajo">
+                    <div>✓ Ejemplar en Sala</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#quijote">Solicitar préstamo</button>
+                </div>
+            </div>
+
+            <div class="tarjeta shadow">
+                <div class="tarjeta-arriba">
+                    <div class="categoria">TECNOLOGÍA</div>
+                    <div class="codigo">T-THC-05</div>
+                </div>
+                <img src="../img/algorithms.webp" alt="Introduction to Algorithms">
+                <div class="tarjeta-info">
+                    <p class="dewey">DEWEY: 005.1 • MIT Press 2009</p>
+                    <h2>Introduction to Algorithms</h2>
+                    <p class="autor">Thomas H. Cormen</p>
+                    <p class="resumen">Referencia completa sobre algoritmos y estructuras de datos para
+                        programadores.
+                    </p>
+                </div>
+                <div class="tarjeta-abajo">
+                    <div>✓ Ejemplar en Sala</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#algorithms">Solicitar préstamo</button>
+                </div>
+            </div>
+
+
+            <div class="tarjeta shadow">
+                <div class="tarjeta-arriba">
+                    <div class="categoria">CIENCIA</div>
+                    <div class="codigo">C-CD-06</div>
+                </div>
+                <img src="../img/origen-especies.jpg" alt="El origen de las especies">
+                <div class="tarjeta-info">
+                    <p class="dewey">DEWEY: 576.8 • John Murray 1859</p>
+                    <h2>El origen de las especies</h2>
+                    <p class="autor">Charles Darwin</p>
+                    <p class="resumen">La obra que presentó la teoría de la evolución por selección natural.</p>
+                </div>
+                <div class="tarjeta-abajo">
+                    <div>✓ Ejemplar en Sala</div>
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                     data-bs-target="#especies"
+                    >Solicitar préstamo</button>                   
+                </div>
+            </div>
+
+        </section>
+
+        <section class="aviso">
+            <div class="aviso-icono">🛡</div>
+            <div class="aviso-texto">
+                <h2>Circulación Libre y Acceso Docente</h2>
+                <p>Los préstamos solicitados mediante este catálogo web quedan en estado "Pendiente"
+                    para retiro presencial en el mostrador del Campus Central durante 48 horas hábiles.</p>
+            </div>
+            <button class="aviso-boton">Ver Reglamento</button>
+        </section>
+    </main>
+
+
+
+
+
+
+    <footer>
+
+        <section class="pie">
+            <div class="pie-col1">
+                <h2>BiblioWeb</h2>
+                <p>Repositorio institucional y portal de consulta académica para la investigación,
+                    preservación y difusión del conocimiento universitario.</p>
+                <p class="pie-mono">Sistema Integrado v5.3 • Registro Archival Central</p>
+            </div>
+
+            <div class="pie-col">
+                <h3>HORARIO DE ATENCIÓN</h3>
+                <p>Lunes a Viernes: 07:30 - 21:00</p>
+                <p>Sábados: 08:00 - 14:00</p>
+                <p>Domingos y Feriados: Cerrado</p>
+                <p class="pie-claro">Sala de Hemeroteca y Fondos Raros</p>
+            </div>
+
+            <div class="pie-col">
+                <h3>SOPORTE Y CONTACTO</h3>
+                <p>Campus Universitario Central, Edif. A</p>
+                <p>consulta@biblioweb.edu</p>
+                <p>+54 (11) 4589-2300</p>
+                <p><a href="#">Políticas de Préstamo y Uso</a></p>
+            </div>
+        </section>
+
+        <div class="copy">
+            2025 BiblioWeb. Todos los derechos reservados. Red de Bibliotecas Universitarias.
+        </div>
+
+    </footer>
+    <!-- ========== MODALES ========== -->
+
+    <!-- ===== MODAL: CIEN AÑOS ===== -->
+    <div class="modal fade" id="cien" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header text-white" style="background-color: #6f1d1b;">
+                    <h1 class="modal-title fs-5">📖 Solicitud de Préstamo de Libro</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+
+                        <div class="p-3 mb-3 rounded" style="background-color: #ffe6a7;">
+                            <small class="fw-bold" style="color: #99582a;">EJEMPLAR EN TRÁMITE</small>
+                            <h5 class="mb-1">Cien Años de Soledad</h5>
+                            <small style="color: #99582a;">Gabriel García Márquez • <strong>N-GGM-01</strong></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del solicitante *</label>
+                            <input type="text" class="form-control" placeholder="Ej. Dr. Martín Almada o Sofía Valenzuela" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" placeholder="nombre@ejemplo.edu" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comentario (opcional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Horario previsto de retiro o departamento académico..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acepto-cien" required>
+                            <label class="form-check-label" for="acepto-cien">Acepto las políticas de préstamo (7 días renovable).</label>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar Solicitud</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: CLEAN CODE ===== -->
+    <div class="modal fade" id="code" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header text-white" style="background-color: #6f1d1b;">
+                    <h1 class="modal-title fs-5">📖 Solicitud de Préstamo de Libro</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+
+                        <div class="p-3 mb-3 rounded" style="background-color: #ffe6a7;">
+                            <small class="fw-bold" style="color: #99582a;">EJEMPLAR EN TRÁMITE</small>
+                            <h5 class="mb-1">Clean Code: Manual de desarrollo ágil</h5>
+                            <small style="color: #99582a;">Robert C. Martin • <strong>T-RCM-02</strong></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del solicitante *</label>
+                            <input type="text" class="form-control" placeholder="Ej. Dr. Martín Almada o Sofía Valenzuela" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" placeholder="nombre@ejemplo.edu" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comentario (opcional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Horario previsto de retiro o departamento académico..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acepto-code" required>
+                            <label class="form-check-label" for="acepto-code">Acepto las políticas de préstamo (7 días renovable).</label>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar Solicitud</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== MODAL: TEORÍA DEL TODO ===== -->
+    <div class="modal fade" id="teoria" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header text-white" style="background-color: #6f1d1b;">
+                    <h1 class="modal-title fs-5">📖 Solicitud de Préstamo de Libro</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+
+                        <div class="p-3 mb-3 rounded" style="background-color: #ffe6a7;">
+                            <small class="fw-bold" style="color: #99582a;">EJEMPLAR EN TRÁMITE</small>
+                            <h5 class="mb-1">La teoría del todo</h5>
+                            <small style="color: #99582a;">Stephen Hawking • <strong>C-SH-03</strong></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del usuario *</label>
+                            <input type="text" class="form-control" placeholder="Ej. Dr. Martín Almada o Sofía Valenzuela" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" placeholder="nombre@ejemplo.edu" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comentario (opcional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Horario previsto de retiro o departamento académico..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acepto-teoria" required>
+                            <label class="form-check-label" for="acepto-teoria">Acepto las políticas de préstamo (7 días renovable).</label>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar Solicitud</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!--  QUIJOTE -->
+    <div class="modal fade" id="quijote" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header text-white" style="background-color: #6f1d1b;">
+                    <h1 class="modal-title fs-5">📖 Solicitud de Préstamo de Libro</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+
+                        <div class="p-3 mb-3 rounded" style="background-color: #ffe6a7;">
+                            <small class="fw-bold" style="color: #99582a;">EJEMPLAR EN TRÁMITE</small>
+                            <h5 class="mb-1">Don Quijote de la Mancha</h5>
+                            <small style="color: #99582a;">Miguel de Cervantes • <strong>N-MDC-04</strong></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del solicitante *</label>
+                            <input type="text" class="form-control" placeholder="Ej. Dr. Martín Almada o Sofía Valenzuela" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" placeholder="nombre@ejemplo.edu" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comentario (opcional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Horario previsto de retiro o departamento académico..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acepto-quijote" required>
+                            <label class="form-check-label" for="acepto-quijote">Acepto las políticas de préstamo (7 días renovable).</label>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar Solicitud</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ALGORITHMS -->
+    <div class="modal fade" id="algorithms" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header text-white" style="background-color: #6f1d1b;">
+                    <h1 class="modal-title fs-5">📖 Solicitud de Préstamo de Libro</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+
+                        <div class="p-3 mb-3 rounded" style="background-color: #ffe6a7;">
+                            <small class="fw-bold" style="color: #99582a;">EJEMPLAR EN TRÁMITE</small>
+                            <h5 class="mb-1">Introduction to Algorithms</h5>
+                            <small style="color: #99582a;">Thomas H. Cormen • <strong>T-THC-05</strong></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del solicitante *</label>
+                            <input type="text" class="form-control" placeholder="Ej. Dr. Martín Almada o Sofía Valenzuela" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" placeholder="nombre@ejemplo.edu" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comentario (opcional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Horario previsto de retiro o departamento académico..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acepto-algorithms" required>
+                            <label class="form-check-label" for="acepto-algorithms">Acepto las políticas de préstamo (7 días renovable).</label>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar Solicitud</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- ESPECIES -->
+    <div class="modal fade" id="especies" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+
+                <div class="modal-header text-white" style="background-color: #6f1d1b;">
+                    <h1 class="modal-title fs-5">📖 Solicitud de Préstamo de Libro</h1>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+                </div>
+
+                <form>
+                    <div class="modal-body">
+
+                        <div class="p-3 mb-3 rounded" style="background-color: #ffe6a7;">
+                            <small class="fw-bold" style="color: #99582a;">EJEMPLAR EN TRÁMITE</small>
+                            <h5 class="mb-1">El origen de las especies</h5>
+                            <small style="color: #99582a;">Charles Darwin • <strong>C-CD-06</strong></small>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Nombre del solicitante *</label>
+                            <input type="text" class="form-control" placeholder="Ej. Dr. Martín Almada o Sofía Valenzuela" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Correo electrónico *</label>
+                            <input type="email" class="form-control" placeholder="nombre@ejemplo.edu" required>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">Comentario (opcional)</label>
+                            <textarea class="form-control" rows="3" placeholder="Horario previsto de retiro o departamento académico..."></textarea>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" id="acepto-especies" required>
+                            <label class="form-check-label" for="acepto-especies">Acepto las políticas de préstamo (7 días renovable).</label>
+                        </div>
+
+                    </div>
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="submit" class="btn btn-danger">Enviar Solicitud</button>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.9/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
