@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administrador</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <link rel="stylesheet" href="../style/administrador_styles.css">
+</head>
+
+<body>
+    <div>
+        
+        <div class="row vw-100">
+            <div class="col-md-10 order-md-2">
+                
+                <header class="border-bottom px-3 px-lg-4 py-3">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                        <div class="nav">
+                            <a href="../index.html" class="text-decoration-none">Portal Público</a>
+                            <span class="text-secondary mx-2">/</span>
+                            <strong>Administración Central</strong>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div>
+                                <button id="btn-tema" onclick="cambiarTema()"
+                                class="btn border-2 p-2" title="Cambiar tema">
+                                <i id="icon_tema" class="bi bi-moon-fill"></i>
+                            </button>
+                        </div>
+                        <div class="text-end">
+                            <div class="fw-semibold name"><span>Lic. M. Pepito</span></div>
+                            <div class="small text-secondary posicion"><span>Jefe de Circulación</span></div>
+                        </div>
+                        <span class="badge p-2 user">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person-fill" viewBox="0 0 16 16">
+                            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </header>
+                <main>
+                    <div class="container-fluid px-3 px-lg-4 py-4">
+                        <!--Panel de control-->
+                        <section id="resumen" class="mb-4">
+                            <div class="d-flex flex-wrap justify-content-between align-items-center gap-3">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span
+                                        class="badge p-3 boton-security d-line-flex align-items-center justify-content-center fw-bold">
+                                        <i class="bi bi-shield-lock fs-5"></i>
+                                    </span>
+                                    <div class="sesion1">
+                                        <div class="d-flex flex-wrap align-items-center gap-2 sesion">
+                                            <h6 class="mb-0 fw-bold">Panel de Control General</h6>
+                                            <span class="badge ">Sesión activa</span>
+                                        </div>
+                                        <p class="mb-0">Bienvenido, <strong>Administrador</strong></p>
+                                        <p class="mb-0 small">admin@biblioweb.test · Acervo Tradicional BiblioWeb</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex flex-wrap align-items-center gap-2 fw-bold close-sesion">
+                                    <button type="button" class="btn d-flex align-items-center gap-2">
+                                        <i class="bi bi-box-arrow-right fs-3"></i>Cerrar sesión
+                                    </button>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Indicadores-->
+                        <section class="row p-3 d-flex align-items-center Indicadores"
+                            aria-label="Indicadores generales">
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Total catálogo</h2>
+                                            <p class="fw-bold mb-0">6 Ejemplares</p>
+                                        </div>
+                                        <i
+                                            class="bi bi-book d-line-flex align-items-center justify-content-center px-2 py-2 fs-5 boton-libro"></i>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Solicitudes pendientes</h2>
+                                            <p class="fw-bold mb-0">3 Peticiones</p>
+                                        </div>
+                                        <i class="bi bi-inbox fs-5 boton-inbox px-2 py-2 d-line-flex align-items-center justify-content-center"></i>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Categorías</h2>
+                                            <p class="fw-bold mb-0">4 Áreas</p>
+                                        </div>
+                                        <i class="bi bi-boxes boton-libro px-2 py-2 fs-5"></i>
+                                    </div>
+                                </article>
+                            </div>
+                            <div class="col-sm-6 col-xl-3">
+                                <article class="card h-100 indicadores2">
+                                    <div class="card-body d-flex justify-content-between align-items-center">
+                                        <div class="Indicadores-text">
+                                            <h2 class="h6 text-uppercase">Protocolo</h2>
+                                            <p class="fw-bold mb-0">10  Protocolos</p>
+                                        </div>
+                                        <i class="bi bi-gear fs-5 boton-inbox px-2 py-2"></i>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                        <!--Gestión de libros-->
+                        <section id="gestion-ejemplares" class="card mb-4 mt-4">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                                    <div class="d-flex gap-3">
+                                        <i
+                                            class="bi bi-file-earmark-text px-2 py-2 gestion fw-bold fs-3"></i>
+                                        <div class="gestion-text">
+                                            <h4 class="fw-semibold mb-1">Gestión de Libros — Agregar o Modificar
+                                                Ejemplar</h4>
+                                            <p class="mb-0">
+                                                Complete la ficha técnica para registrar un nuevo ejemplar o actualizar
+                                                la
+                                                información del
+                                                catálogo bibliográfico.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                                <form>
+                                    <div class="row g-3 formulario">
+                                        <div class="col-md-6 ">
+                                            <label for="titulo"
+                                                class="form-label fw-semibold d-flex justify-content-between">Título
+                                                del Libro<span>(Requerido)</span></label>
+                                            <div class="input-group input2">
+                                                <span class="input-group-text"><i class="bi bi-book-half"></i></span>
+                                                <input type="text" class="form-control" id="titulo"
+                                                    placeholder="Ej: Crónica de una muerte anunciada" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="autor"
+                                                class="form-label fw-semibold d-flex justify-content-between">Autor /
+                                                Autores <span>(Requerido)</span></label>
+                                            <div class="input-group input2">
+                                                <span class="input-group-text"><i class="bi bi-person-fill"></i></span>
+                                                <input type="text" class="form-control" id="autor"
+                                                    placeholder="Ej: Gabriel García Márquez" required>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="portada" class="form-label fw-semibold">URL de la
+                                                Portada</label>
+                                            <div class="input-group input2">
+                                                <span class="input-group-text"><i class="bi bi-link"></i></span>
+                                                <input type="url" class="form-control" id="portada"
+                                                    placeholder="https://biblioteca.test/portadas/ejemplo.jpg">
+                                            </div>
+                                            <div class="form-text"><span>Formatos óptimos: JPG, WebP o PNG con
+                                                    proporción editorial
+                                                    2:3
+                                                    vertical.</span>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label for="categoria" class="form-label fw-semibold">Categoría Temática
+                                                <span class="text-secondary fw-normal">(Clasificación
+                                                    Dewey)</span></label>
+                                            <select class="form-select" id="categoria">
+                                                <option selected>Narrativa y Ficción</option>
+                                                <option>Tecnología</option>
+                                                <option>Ciencias Sociales</option>
+                                                <option>Historia</option>
+                                            </select>
+                                        </div>
+                                        <div class="">
+                                            <label for="descripcion" class="form-label fw-semibold">Descripción o
+                                                Sinopsis
+                                                breve</label>
+                                            <textarea class="form-control" id="descripcion" rows="4"
+                                                placeholder="Sintetice el argumento, palabras clave temáticas y el público destinatario..."></textarea>
+                                            <div class="form-text">Resumen para consulta en catálogo.</div>
+                                        </div>
+                                    </div>
+                                    <hr class="my-4">
+                                    <div class="d-flex flex-wrap justify-content-end gap-2">
+                                        <button type="reset" class="px-2 py-2 cancelar">
+                                            Cancelar / Limpiar
+                                        </button>
+                                        <button type="submit" class="px-2 py-2 guardar">
+                                            <i class="me-2"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+                                                    height="20" fill="currentColor" class="bi bi-bookmark-plus"
+                                                    viewBox="0 0 16 16">
+                                                    <path
+                                                        d="M2 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v13.5a.5.5 0 0 1-.777.416L8 13.101l-5.223 2.815A.5.5 0 0 1 2 15.5zm2-1a1 1 0 0 0-1 1v12.566l4.723-2.482a.5.5 0 0 1 .554 0L13 14.566V2a1 1 0 0 0-1-1z" />
+                                                    <path
+                                                        d="M8 4a.5.5 0 0 1 .5.5V6H10a.5.5 0 0 1 0 1H8.5v1.5a.5.5 0 0 1-1 0V7H6a.5.5 0 0 1 0-1h1.5V4.5A.5.5 0 0 1 8 4" />
+                                                </svg></i>Guardar Libro
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </section>
+                        <!--Inventario-->
+                        <section id="inventario" class="card mb-4">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+                                    <div class="gestion-text">
+                                        <div class="d-flex flex-wrap align-items-center gap-2 gestion-text">
+                                            <h4 class="mb-0">Inventario Actual del Catálogo</h4>
+                                            <span class="badge inventario-span">3 registros</span>
+                                        </div>
+                                        <p class="mb-0 ">Control de acervo disponible, clasificación temática y
+                                            mantenimiento de
+                                            fichas bibliográficas.</p>
+                                    </div>
+                                    <button type="button" class="px-2 py-2 descargar-cv">
+                                        <i class="me-1 bi bi-download"></i>Exportar CSV
+                                    </button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="encabezado">
+                                            <tr>
+                                                <th scope="col">Portada</th>
+                                                <th scope="col">Título del libro</th>
+                                                <th scope="col">Autor</th>
+                                                <th scope="col">Categoría</th>
+                                                <th scope="col" class="text-nowrap">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="body-table">
+                                            <tr>
+                                                <td>
+                                                    <img src="../img/images.jpg" alt="Portada de Cien años de soledad"
+                                                        class="img-thumbnail">
+                                                </td>
+                                                <td>
+                                                    <strong>Cien Años de Soledad</strong>
+                                                    <div class="small text-secondary"><span>ISBN: 978-0307474728</span>
+                                                    </div>
+                                                </td>
+                                                <td>G. García Márquez</td>
+                                                <td><span class="badge categoria-narrativa">Narrativa</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-2 boton-editar"><i
+                                                            class="me-1 bi bi-pen"></i>Editar</button>
+                                                    <button type="button" class="px-2 py-2 boton-eliminar"><i
+                                                            class="me-1 bi bi-trash3"></i>Eliminar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <img src="../img/clean_code.jpg" alt="Portada de Clean Code"
+                                                        class="img-thumbnail">
+                                                </td>
+                                                <td>
+                                                    <strong>Clean Code</strong>
+                                                    <div class="small text-secondary"><span>ISBN: 978-0132350884</span>
+                                                    </div>
+                                                </td>
+                                                <td>Robert C. Martin</td>
+                                                <td><span class="badge categoria_tecnologia">Tecnología</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-2 boton-editar"><i
+                                                            class="me-1 bi bi-pen"></i>Editar</button>
+                                                    <button type="button" class="px-2 py-2 boton-eliminar"><i
+                                                            class="me-1 bi bi-trash3"></i>Eliminar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td><img src="../img/noches_blancas.jpg" alt="Portada de noche blancas"
+                                                        class="img-thumbnail"></td>
+                                                <td><strong>Registro de ejemplo 3</strong>
+                                                    <div class="small text-secondary">ISBN: Pendiente</div>
+                                                </td>
+                                                <td>Autor de ejemplo</td>
+                                                <td><span class="badge categoria-narrativa">Narrativa</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-2 boton-editar"><i
+                                                            class="me-1 bi bi-pen"></i>Editar</button>
+                                                    <button type="button" class="px-2 py-2 boton-eliminar"><i
+                                                            class="me-1 bi bi-trash3"></i>Eliminar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                        <!--Solicitud de prestamo-->
+                        <section id="solicitud" class="card mb-4">
+                            <div class="card-body p-3 p-lg-4">
+                                <div class="d-flex flex-wrap justify-content-between align-items-center gap-3 mb-3">
+                                    <div class="gestion-text">
+                                        <div class="d-flex flex-wrap align-items-center gap-2 gestion-text">
+                                            <h4 class="mb-0">Solicitudes de Préstamo Recibidas</h4>
+                                        </div>
+                                        <p class="mb-0 ">Peticiones públicas enviadas por los lectores desde el
+                                            catálogo.</p>
+                                    </div>
+                                    <button type="button" class="px-2 py-2 buzon">
+                                        <i class="me-1 bi bi-bell"></i>Buzón del día
+                                    </button>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover align-middle mb-0">
+                                        <thead class="encabezado">
+                                            <tr>
+                                                <th scope="col">ID solicitud</th>
+                                                <th scope="col">Libro solicitado</th>
+                                                <th scope="col">Solicitante</th>
+                                                <th scope="col">Correo de contacto</th>
+                                                <th scope="col">Comentario del lector</th>
+                                                <th scope="col">Estado</th>
+                                                <th scope="col" class="text-nowrap">Gestión</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="body-table">
+                                            <tr>
+                                                <td>
+                                                    <strong>#SOL-1042</strong>
+                                                </td>
+                                                <td>
+                                                    Clean Code
+                                                </td>
+                                                <td>Sofía Morales</td>
+                                                <td><a href="mailto">smorales@alumno.edu</a></td>
+                                                <td>"Para proyecto final de taller de software"</td>
+                                                <td><span class="badge categoria-narrativa">Pendiente</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-1 boton-aprobar"><i
+                                                            class="me-1 bi bi-check2-circle"></i>Aprobar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>#SOL-1043</strong>
+                                                </td>
+                                                <td>
+                                                    Breve historia del tiempo
+                                                </td>
+                                                <td>Carlos Mendoza</td>
+                                                <td><a href="mailto">cmendoza@universidad.edu</a></td>
+                                                <td>"Consulta para cátedra de física"</td>
+                                                <td><span class="badge categoria_tecnologia">Pendiente</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-1 boton-aprobar"><i
+                                                            class="me-1 bi bi-check2-circle"></i>Aprobar</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <strong>#SOL-1044</strong>
+                                                </td>
+                                                <td>
+                                                    Cien Años de Soledad
+                                                </td>
+                                                <td>Lucía Valenzuela</td>
+                                                <td><a href="mailto">lvalenzuela@correo.com</a></td>
+                                                <td>"Lectura asignada de literatura"</td>
+                                                <td><span class="badge categoria-narrativa">Pendiente</span></td>
+                                                <td class="text-nowrap">
+                                                    <button type="button" class="px-2 py-1 boton-aprobar"><i
+                                                            class="me-1 bi bi-check2-circle"></i>Aprobar</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </main>
+                <footer>
+                    <div class="row">
+                        <div class="col-md-10 ">
+                            <div class="d-flex justify-content-between text-align-center p-3">
+                                <p class="copy-text">© 2025 BiblioWeb. Todos los derechos reservados.
+                                </p>
+                                <p>Red de Bibliotecas Universitarias.</p>
+                                <p class="">Norma ISO 2709 / MARC21</p>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <!-- Menú lateral -->
+            <aside class="col-md-2 order-md-1 position-sticky top-0 vh-100 overflow-auto text-white aside_bg d-flex flex-column">
+                <div class="p-3 border-bottom border-secondary aside_text">
+                    <img src="" alt="">
+                    <a href="/index.html" class="text-decoration-none fw-bold text-title">
+                        <i class="bi bi-book-half me-2"></i>BiblioWeb
+                    </a>
+                    <div class="small text-uppercase text-secondary"><span> Panel docente / admin</span></div>
+                </div>
+                <nav class="nav flex-column p-2 gap-2 aside-nav" aria-label="Menú principal">
+                    <a class="nav-link active nav-hover" href="#resumen">
+                        <i class="me-2 bi bi-bar-chart-steps"></i>Resumen General
+                    </a>
+                    <a class="nav-link nav-hover" href="#gestion-ejemplares">
+                        <i class="me-2 bi bi-archive"></i>Gestión de Ejemplares
+                    </a>
+                    <a class="nav-link nav-hover" href="#inventario">
+                        <i class="me-2 bi bi-card-list"></i>Inventario
+                    </a>
+                    <a class="nav-link nav-hover" href="#solicitud">
+                        <i class="me-2 bi bi-book-half"></i>Circulación y Préstamos
+                    </a>
+                </nav>
+                <div class="mt-auto p-3 border-top border-secondary">
+                    <a href="" class="nav-link cerrar-sesion">
+                        <i class="me-2 bi bi-box-arrow-right"></i>Cerrar sesión
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+    <script src="../js/tema.js"></script>
+</body>
+
+</html>
